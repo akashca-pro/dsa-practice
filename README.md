@@ -78,14 +78,15 @@ A comprehensive Data Structures and Algorithms learning resource in JavaScript, 
 
 ### 09. Trees
 
-| File                  | Topics Covered                                 |
-| --------------------- | ---------------------------------------------- |
-| `binaryTreeBasics.js` | Traversals, height, balance, symmetric         |
-| `binarySearchTree.js` | BST operations, validation, LCA, kth element   |
-| `treeTraversals.js`   | Iterative traversals, Morris traversal         |
-| `balancedTrees.js`    | AVL tree rotations and balancing               |
-| `trie.js`             | Prefix tree, autocomplete, word search         |
-| `treeProblems.js`     | Path sum, serialize, construct from traversals |
+| File                  | Topics Covered                                       |
+| --------------------- | ---------------------------------------------------- |
+| `treeFundamentals.js` | Core concepts, terminology, tree types, visual guide |
+| `binaryTreeBasics.js` | Traversals, height, balance, symmetric               |
+| `binarySearchTree.js` | BST operations, validation, LCA, kth element         |
+| `treeTraversals.js`   | Iterative traversals, Morris traversal               |
+| `balancedTrees.js`    | AVL tree rotations and balancing                     |
+| `trie.js`             | Prefix tree, autocomplete, word search               |
+| `treeProblems.js`     | Path sum, serialize, construct from traversals       |
 
 ### 10. Heaps
 

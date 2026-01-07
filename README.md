@@ -2,7 +2,7 @@
 
 A comprehensive Data Structures and Algorithms learning resource in JavaScript, designed for interview preparation and mastering fundamental CS concepts.
 
-## 📚 Contents
+## Contents
 
 ### 01. Complexity Analysis
 
@@ -102,14 +102,14 @@ A comprehensive Data Structures and Algorithms learning resource in JavaScript, 
 - `bitManipulation.js` - Bit manipulation
 - `divideAndConquer.js` - Divide and conquer algorithms
 
-## 🎯 How to Use
+## How to Use
 
 1. **Start with fundamentals**: Begin with complexity analysis to understand how to evaluate algorithms
 2. **Progress linearly**: Topics build upon each other
 3. **Practice problems**: Each file includes practice problems with solutions
 4. **Review patterns**: Focus on recognizing when to apply each technique
 
-## 💡 Each File Contains
+## Each File Contains
 
 - **Concept explanation** with real-world analogies
 - **Step-by-step implementations** with comments
@@ -117,7 +117,7 @@ A comprehensive Data Structures and Algorithms learning resource in JavaScript, 
 - **Common mistakes** and edge cases
 - **Practice problems** from easy to hard
 
-## 🚀 Quick Start
+## Quick Start
 
 ```javascript
 // Run any file to test the implementations
@@ -127,7 +127,7 @@ node 01-complexity-analysis/bigONotation.js
 find . -name "*.js" -exec node --check {} \;
 ```
 
-## 📖 Recommended Study Order
+## Recommended Study Order
 
 1. Complexity Analysis → Understanding performance
 2. Arrays & Strings → Foundation of data manipulation
@@ -140,7 +140,7 @@ find . -name "*.js" -exec node --check {} \;
 9. Dynamic Programming → Optimization problems
 10. Greedy & Advanced → Problem-solving techniques
 
-## 🏆 Interview Preparation Tips
+## Interview Preparation Tips
 
 - Master the **patterns**, not just individual problems
 - Always discuss **trade-offs** between approaches
@@ -150,4 +150,4 @@ find . -name "*.js" -exec node --check {} \;
 
 ---
 
-Happy Learning! 🎉
+Happy Learning!

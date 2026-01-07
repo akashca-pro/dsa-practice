@@ -99,13 +99,15 @@ A comprehensive Data Structures and Algorithms learning resource in JavaScript, 
 
 ### 11. Graphs
 
-| File                     | Topics Covered                             |
-| ------------------------ | ------------------------------------------ |
-| `graphRepresentation.js` | Adjacency list vs matrix, when to use each |
-| `bfsTraversal.js`        | BFS, shortest path, multi-source BFS       |
-| `dfsTraversal.js`        | DFS, cycle detection, topological sort     |
-| `shortestPath.js`        | Dijkstra, Bellman-Ford, Floyd-Warshall     |
-| `graphProblems.js`       | Union-Find, connected components           |
+| File                         | Topics Covered                             |
+| ---------------------------- | ------------------------------------------ |
+| `graphRepresentation.js`     | Adjacency list vs matrix, when to use each |
+| `bfsTraversal.js`            | BFS, shortest path, multi-source BFS       |
+| `dfsTraversal.js`            | DFS, cycle detection, topological sort     |
+| `shortestPath.js`            | Dijkstra, Bellman-Ford, Floyd-Warshall     |
+| `minimumSpanningTree.js`     | Kruskal's, Prim's, Union-Find              |
+| `advancedGraphAlgorithms.js` | Tarjan's SCC, articulation points, bridges |
+| `graphProblems.js`           | Union-Find, connected components           |
 
 ### 12. Dynamic Programming
 
@@ -125,12 +127,16 @@ A comprehensive Data Structures and Algorithms learning resource in JavaScript, 
 
 ### 14. Advanced Techniques
 
-| File                  | Topics Covered                            |
-| --------------------- | ----------------------------------------- |
-| `slidingWindow.js`    | Fixed/variable window, substring problems |
-| `twoPointers.js`      | Opposite ends, fast/slow, 3-way partition |
-| `bitManipulation.js`  | XOR tricks, bit counting, subsets         |
-| `divideAndConquer.js` | Merge sort, quick select, closest pair    |
+| File                     | Topics Covered                               |
+| ------------------------ | -------------------------------------------- |
+| `slidingWindow.js`       | Fixed/variable window, substring problems    |
+| `twoPointers.js`         | Opposite ends, fast/slow, 3-way partition    |
+| `bitManipulation.js`     | XOR tricks, bit counting, subsets            |
+| `divideAndConquer.js`    | Merge sort, quick select, closest pair       |
+| `segmentTree.js`         | Segment tree, Fenwick tree, range queries    |
+| `mathAndNumberTheory.js` | GCD, primes, modular arithmetic, nCr         |
+| `designPatterns.js`      | LRU Cache, LFU Cache, Iterator, Rate Limiter |
+| `intervalProblems.js`    | Merge intervals, meeting rooms, scheduling   |
 
 ---
 

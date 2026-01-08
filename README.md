@@ -22,11 +22,12 @@ A comprehensive Data Structures and Algorithms learning resource in JavaScript, 
 
 ### 03. Recursion
 
-| File                   | Topics Covered                               |
-| ---------------------- | -------------------------------------------- |
-| `recursionBasics.js`   | Base/recursive cases, types of recursion     |
-| `recursionPatterns.js` | Divide & conquer, accumulator pattern        |
-| `backtracking.js`      | N-Queens, Sudoku, permutations, combinations |
+| File                   | Topics Covered                                      |
+| ---------------------- | --------------------------------------------------- |
+| `recursionBasics.js`   | Base/recursive cases, types of recursion            |
+| `recursionPatterns.js` | Divide & conquer, accumulator pattern               |
+| `backtracking.js`      | N-Queens, Sudoku, permutations, combinations        |
+| `recursionProblems.js` | Subsets, word search, phone digits, generate parens |
 
 ### 04. Searching
 
@@ -144,7 +145,7 @@ A comprehensive Data Structures and Algorithms learning resource in JavaScript, 
 
 Each file follows a consistent structure:
 
-```
+```text
 1. CONCEPT          → Clear explanation of the topic
 2. REAL-WORLD ANALOGY → Relatable everyday examples
 3. INDUSTRY APPLICATIONS → Where it's used professionally

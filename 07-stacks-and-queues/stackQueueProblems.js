@@ -457,7 +457,95 @@ class MinStack {
 }
 
 // ------------------------------------------
-// 4.2 DESIGN CIRCULAR QUEUE
+// 4.2 UNDO/REDO STACK
+// ------------------------------------------
+
+/**
+ * Problem: Implement Undo/Redo functionality
+ * 
+ * REAL-WORLD USE CASES:
+ * - Text editors (VS Code, Word)
+ * - Image editors (Photoshop)
+ * - Browser history (back/forward)
+ * - Drawing applications
+ * - Any state management with history
+ * 
+ * KEY INSIGHT:
+ * - Use TWO stacks: undo stack and redo stack
+ * - Each action pushes to undo, clears redo
+ * - Undo: pop from undo, push to redo
+ * - Redo: pop from redo, push to undo
+ */
+class UndoRedo {
+    constructor(initialState) {
+        this.undoStack = [];
+        this.redoStack = [];
+        this.current = initialState;
+    }
+
+    // Record new state
+    do(newState) {
+        this.undoStack.push(this.current);  // Save current to undo stack
+        this.current = newState;
+        this.redoStack.length = 0;          // Clear redo (new branch)
+    }
+
+    // Go back to previous state
+    undo() {
+        if (this.undoStack.length === 0) return this.current;
+
+        this.redoStack.push(this.current);
+        this.current = this.undoStack.pop();
+        return this.current;
+    }
+
+    // Go forward to next state
+    redo() {
+        if (this.redoStack.length === 0) return this.current;
+
+        this.undoStack.push(this.current);
+        this.current = this.redoStack.pop();
+        return this.current;
+    }
+
+    getState() { return this.current; }
+    canUndo() { return this.undoStack.length > 0; }
+    canRedo() { return this.redoStack.length > 0; }
+}
+
+/**
+ * USAGE EXAMPLE:
+ * 
+ * const editor = new UndoRedo("Hello");
+ * editor.do("Hello World");
+ * editor.do("Hello World!");
+ * console.log(editor.getState());  // "Hello World!"
+ * 
+ * editor.undo();
+ * console.log(editor.getState());  // "Hello World"
+ * 
+ * editor.undo();
+ * console.log(editor.getState());  // "Hello"
+ * 
+ * editor.redo();
+ * console.log(editor.getState());  // "Hello World"
+ * 
+ * editor.do("Hello There");        // New branch, clears redo
+ * console.log(editor.canRedo());   // false
+ * 
+ * 
+ * TIME COMPLEXITY: O(1) for all operations
+ * SPACE COMPLEXITY: O(n) where n = number of states
+ */
+
+/**
+ * RELATED QUESTIONS:
+ * - Design Browser History (LeetCode 1472)
+ * - Design Text Editor (LeetCode 2296)
+ */
+
+// ------------------------------------------
+// 4.3 DESIGN CIRCULAR QUEUE
 // ------------------------------------------
 
 class MyCircularQueue {
@@ -543,5 +631,6 @@ module.exports = {
     MyQueue,
     MyStack,
     MinStack,
+    UndoRedo,
     MyCircularQueue
 };

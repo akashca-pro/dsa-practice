@@ -86,6 +86,83 @@ class LinearProbingHashTable {
     }
 }
 
+// Open Addressing - Quadratic Probing
+// Uses i^2 as step size to reduce primary clustering
+class QuadraticProbingHashTable {
+    constructor(size = 53) {
+        this.keys = new Array(size);
+        this.values = new Array(size);
+        this.size = size;
+        this.count = 0;
+    }
+    
+    _hash(key) {
+        let hash = 0;
+        for (const char of String(key)) hash = (hash * 31 + char.charCodeAt(0)) % this.size;
+        return hash;
+    }
+    
+    set(key, value) {
+        if (this.count >= this.size * 0.7) this._resize();
+        
+        let idx = this._hash(key);
+        let i = 0;
+        
+        // Quadratic probing: (hash + i^2) % size
+        while (this.keys[idx] !== undefined && this.keys[idx] !== key) {
+            i++;
+            idx = (this._hash(key) + i * i) % this.size;
+        }
+        
+        if (this.keys[idx] === undefined) this.count++;
+        this.keys[idx] = key;
+        this.values[idx] = value;
+    }
+    
+    get(key) {
+        let idx = this._hash(key);
+        let i = 0;
+        
+        while (this.keys[idx] !== undefined && i < this.size) {
+            if (this.keys[idx] === key) return this.values[idx];
+            i++;
+            idx = (this._hash(key) + i * i) % this.size;
+        }
+        
+        return undefined;
+    }
+    
+    delete(key) {
+        let idx = this._hash(key);
+        let i = 0;
+        
+        while (this.keys[idx] !== undefined && i < this.size) {
+            if (this.keys[idx] === key) {
+                this.keys[idx] = undefined;
+                this.values[idx] = undefined;
+                this.count--;
+                return true;
+            }
+            i++;
+            idx = (this._hash(key) + i * i) % this.size;
+        }
+        
+        return false;
+    }
+    
+    _resize() {
+        const oldKeys = this.keys, oldValues = this.values;
+        this.size = this.size * 2;
+        this.keys = new Array(this.size);
+        this.values = new Array(this.size);
+        this.count = 0;
+        
+        for (let i = 0; i < oldKeys.length; i++) {
+            if (oldKeys[i] !== undefined) this.set(oldKeys[i], oldValues[i]);
+        }
+    }
+}
+
 // Double Hashing
 class DoubleHashingTable {
     constructor(size = 53) {
@@ -131,4 +208,4 @@ class DoubleHashingTable {
     }
 }
 
-module.exports = { ChainingHashTable, LinearProbingHashTable, DoubleHashingTable };
+module.exports = { ChainingHashTable, LinearProbingHashTable, QuadraticProbingHashTable, DoubleHashingTable };
